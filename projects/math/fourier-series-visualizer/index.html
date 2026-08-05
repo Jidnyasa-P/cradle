@@ -62,7 +62,9 @@
       <aside class="panel controls-panel" aria-label="Controls">
         <!-- Wave Type -->
         <section class="card">
-          <h2 class="card-title"><i class="fa-solid fa-wave-square"></i> Wave Type</h2>
+          <h2 class="card-title">
+            <i class="fa-solid fa-wave-square"></i> Wave Type
+          </h2>
           <div class="wave-grid">
             <button type="button" class="wave-btn active" data-wave="square">
               <i class="fa-solid fa-grip-lines"></i> Square
@@ -81,7 +83,9 @@
 
         <!-- Frequency -->
         <section class="card">
-          <h2 class="card-title"><i class="fa-solid fa-sliders"></i> Frequency</h2>
+          <h2 class="card-title">
+            <i class="fa-solid fa-sliders"></i> Frequency
+          </h2>
           <div class="harmonic-control">
             <label for="freqSlider">Hz</label>
             <input
@@ -99,7 +103,9 @@
 
         <!-- Harmonics Count -->
         <section class="card">
-          <h2 class="card-title"><i class="fa-solid fa-layer-group"></i> Harmonics</h2>
+          <h2 class="card-title">
+            <i class="fa-solid fa-layer-group"></i> Harmonics
+          </h2>
           <div class="harmonic-control">
             <label for="harmCount">Count</label>
             <input
@@ -135,7 +141,12 @@
             <button type="button" class="btn btn-primary" id="animateBtn">
               <i class="fa-solid fa-play" id="animateIcon"></i> Animate Build
             </button>
-            <button type="button" class="btn btn-secondary" id="resetBtn">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              id="resetBtn"
+              aria-label="Reset waveform"
+            >
               <i class="fa-solid fa-rotate-left"></i>
             </button>
           </div>
@@ -143,7 +154,9 @@
 
         <!-- Harmonic List -->
         <section class="card">
-          <h2 class="card-title"><i class="fa-solid fa-list"></i> Harmonic Toggle</h2>
+          <h2 class="card-title">
+            <i class="fa-solid fa-list"></i> Harmonic Toggle
+          </h2>
           <div class="harmonic-list" id="harmonicList">
             <!-- Populated by script.js -->
           </div>
@@ -156,17 +169,26 @@
         <div class="canvas-card">
           <div class="canvas-header">
             <h3 class="canvas-title">
-              <i class="fa-solid fa-chart-line" style="color: var(--theme-accent)"></i>
+              <i
+                class="fa-solid fa-chart-line"
+                style="color: var(--theme-accent)"
+              ></i>
               Composite Waveform
             </h3>
             <span class="canvas-meta" id="compositeMeta">—</span>
           </div>
           <div class="canvas-wrap">
-            <canvas id="compositeCanvas" aria-label="Composite Fourier waveform"></canvas>
+            <canvas
+              id="compositeCanvas"
+              aria-label="Composite Fourier waveform"
+            ></canvas>
           </div>
           <div class="legend" id="compositeLegend">
             <span class="legend-item">
-              <span class="legend-swatch" style="background: var(--theme-accent)"></span>
+              <span
+                class="legend-swatch"
+                style="background: var(--theme-accent)"
+              ></span>
               Composite
             </span>
           </div>
@@ -176,13 +198,19 @@
         <div class="canvas-card">
           <div class="canvas-header">
             <h3 class="canvas-title">
-              <i class="fa-solid fa-bars-progress" style="color: var(--theme-accent)"></i>
+              <i
+                class="fa-solid fa-bars-progress"
+                style="color: var(--theme-accent)"
+              ></i>
               Individual Harmonics
             </h3>
             <span class="canvas-meta" id="harmonicsMeta">—</span>
           </div>
           <div class="canvas-wrap">
-            <canvas id="harmonicsCanvas" aria-label="Individual harmonic waveforms"></canvas>
+            <canvas
+              id="harmonicsCanvas"
+              aria-label="Individual harmonic waveforms"
+            ></canvas>
           </div>
           <div class="status-bar">
             <span id="statusLeft">Drag sliders to adjust parameters</span>
@@ -194,11 +222,13 @@
         <div class="info-card">
           <h3><i class="fa-solid fa-lightbulb"></i> How it works</h3>
           <p>
-            The Fourier series decomposes any periodic waveform into a sum of sine and cosine
-            waves (harmonics). The fundamental frequency determines the pitch, and each harmonic
-            contributes at an integer multiple of that frequency. <strong>Square</strong> waves
-            use odd harmonics, <strong>Sawtooth</strong> uses all harmonics, and
-            <strong>Triangle</strong> uses odd harmonics that decay more rapidly.
+            The Fourier series decomposes any periodic waveform into a sum of
+            sine and cosine waves (harmonics). The fundamental frequency
+            determines the pitch, and each harmonic contributes at an integer
+            multiple of that frequency. <strong>Square</strong> waves use odd
+            harmonics, <strong>Sawtooth</strong> uses all harmonics, and
+            <strong>Triangle</strong> uses odd harmonics that decay more
+            rapidly.
           </p>
           <span class="formula">f(t) = Σ bₙ · sin(n · ω₀ · t)</span>
         </div>
@@ -206,7 +236,10 @@
     </main>
 
     <!-- Shared BackToHome UI Component -->
-    <script src="../../../src/components/ui/BackToHome/BackToHome.js" defer></script>
+    <script
+      src="../../../src/components/ui/BackToHome/BackToHome.js"
+      defer
+    ></script>
     <!-- Engine -->
     <script src="fourierEngine.js"></script>
     <!-- Application Script -->

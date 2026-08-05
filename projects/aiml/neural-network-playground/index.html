@@ -73,7 +73,14 @@
           </div>
           <div class="speed-control">
             <label>Speed</label>
-            <input type="range" id="speedSlider" min="1" max="100" value="50" />
+            <input
+              type="range"
+              id="speedSlider"
+              min="1"
+              max="100"
+              value="50"
+              aria-label="Training speed"
+            />
             <span id="speedLabel">50 steps/frame</span>
           </div>
         </section>
@@ -193,6 +200,7 @@
               type="file"
               id="csvFileInput"
               accept=".csv"
+              aria-label="Upload custom CSV dataset"
               style="display: none"
             />
             <div
@@ -214,7 +222,14 @@
           </div>
           <div class="form-row">
             <label>Noise</label>
-            <input type="range" id="noiseSlider" min="0" max="50" value="15" />
+            <input
+              type="range"
+              id="noiseSlider"
+              min="0"
+              max="50"
+              value="15"
+              aria-label="Dataset noise"
+            />
             <span id="noiseLabel">15%</span>
           </div>
           <div class="form-row">
@@ -226,6 +241,7 @@
               max="500"
               value="200"
               step="50"
+              aria-label="Dataset point count"
             />
             <span id="pointsLabel">200</span>
           </div>

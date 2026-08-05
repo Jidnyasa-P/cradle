@@ -43,7 +43,14 @@
               placeholder="Search by name, symbol, atomic #, or category..."
               autocomplete="off"
             />
-            <button id="clear-search" class="btn-icon" hidden>✕</button>
+            <button
+              id="clear-search"
+              class="btn-icon"
+              hidden
+              aria-label="Clear search"
+            >
+              ✕
+            </button>
           </div>
 
           <div class="display-mode-selector">
@@ -70,6 +77,7 @@
             <input
               type="range"
               id="temp-slider"
+              aria-label="Temperature"
               min="0"
               max="6000"
               step="10"
@@ -108,7 +116,13 @@
       <!-- Element Detail Modal -->
       <div class="modal-backdrop" id="element-modal" hidden>
         <div class="modal-card">
-          <button class="modal-close" id="modal-close">✕</button>
+          <button
+            class="modal-close"
+            id="modal-close"
+            aria-label="Close element details"
+          >
+            ✕
+          </button>
           <div class="modal-header" id="modal-header">
             <!-- Dynamic element title & category badge -->
           </div>

@@ -10,6 +10,7 @@
     "check:links": "node scripts/check-broken-links.js",
     "detect:duplicates": "node scripts/detect-duplicate-js.js",
     "healthcheck": "npm run build && npm run validate:mini-projects && npm run check:links && npm run detect:duplicates -- --fail-on-dup && npm test",
+    "validate:a11y-labels": "node scripts/validate-accessible-labels.js",
     "test": "node --test",
     "dev": "npm run generate && npx live-server",
     "build": "npm run generate",
